@@ -1,0 +1,45 @@
+<nav class="navbar" [class.scrolled]="isScrolled" [class.mobile-open]="isMobileMenuOpen">
+  <div class="nav-container">
+    <!-- Logo -->
+    <a (click)="scrollToSection('hero')" class="nav-logo">
+      <span>FLUX</span>
+    </a>
+
+    <!-- Desktop Navigation Links -->
+    <div class="nav-links">
+      <a (click)="scrollToSection('features')" class="nav-link">Features</a>
+      <a (click)="scrollToSection('share')" class="nav-link">Share</a>
+      <a (click)="scrollToSection('packages')" class="nav-link">Packages</a>
+      <a (click)="scrollToSection('demo')" class="nav-link">Demo</a>
+      <a (click)="scrollToSection('reviews')" class="nav-link">Reviews</a>
+      <a (click)="scrollToSection('materials')" class="nav-link">Materials</a>
+    </div>
+
+    <!-- Desktop CTA Action -->
+    <div class="nav-cta">
+      <button (click)="scrollToSection('cta')" class="btn-navbar">Get Your Card</button>
+    </div>
+
+    <!-- Mobile Hamburger Toggle -->
+    <button class="mobile-toggle" (click)="toggleMobileMenu()" aria-label="Toggle menu">
+      <div class="hamburger">
+        <span class="bar line-top"></span>
+        <span class="bar line-mid"></span>
+        <span class="bar line-bot"></span>
+      </div>
+    </button>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div class="mobile-menu" [class.open]="isMobileMenuOpen">
+    <div class="mobile-links">
+      <a (click)="scrollToSection('features')" class="mobile-link">Features</a>
+      <a (click)="scrollToSection('share')" class="mobile-link">Share</a>
+      <a (click)="scrollToSection('packages')" class="mobile-link">Packages</a>
+      <a (click)="scrollToSection('demo')" class="mobile-link">Demo</a>
+      <a (click)="scrollToSection('reviews')" class="mobile-link">Reviews</a>
+      <a (click)="scrollToSection('materials')" class="mobile-link">Materials</a>
+      <button (click)="scrollToSection('cta')" class="btn-mobile-cta">Get Your Card</button>
+    </div>
+  </div>
+</nav>

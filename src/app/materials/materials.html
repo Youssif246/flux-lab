@@ -1,47 +1,22 @@
-<section class="materials-section">
-  <h2>Materials</h2>
-  <p class="subtitle">Premium Materials For Every Brand.</p>
+<section class="materials-section" id="materials">
+  <div class="materials-container">
+    <div class="section-header reveal">
+      <span class="badge">PHYSICAL CRAFTSMANSHIP</span>
+      <h2>Premium Materials</h2>
+      <p>Luxury textures and bespoke finishes designed to match any brand identity.</p>
+    </div>
 
-  <div class="materials-box">
-    <div class="materials-grid">
-      <div class="material-card" *ngFor="let material of materials">
-        <img [src]="material.image" [alt]="material.name">
-        <p>{{ material.name }}</p>
+    <div class="materials-wrapper">
+      <div class="materials-grid">
+        <div class="material-card reveal" *ngFor="let item of materials; let i = index" [style.--delay.ms]="i * 80" #cardElement (mousemove)="onMouseMove($event, cardElement)" (mouseleave)="onMouseLeave(cardElement)">
+          <div class="material-image-holder">
+            <img [src]="item.image" [alt]="item.name" class="material-img">
+            <!-- Gold/glass reflection swipe overlay -->
+            <div class="card-glass-shine"></div>
+          </div>
+          <p class="material-name">{{ item.name }}</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
-<section class="cta-section">
-  <div class="cta-box">
-    <div class="cta-glow"></div>
-
-    <div class="cta-content">
-      <span>SMART NETWORKING</span>
-
-      <h2>
-        Ready To Elevate <br>
-        Your Brand?
-      </h2>
-
-      <p>
-        Transform every interaction into opportunity with FLUX.
-      </p>
-
-      <button>Get Your FLUX Card</button>
-    </div>
-
-    <img src="fotter-image.png" class="cta-image">
-  </div>
-</section>
-<footer class="footer">
-  <div class="footer-top">
-    <h2>FLUX</h2>
-    <p>Smart NFC Business Cards</p>
-  </div>
-
-  <div class="footer-bottom">
-    <div>info@fluxlab.ae</div>
-    <div>054 480 6804</div>
-    <div>@flux.lab.ae</div>
-  </div>
-</footer>

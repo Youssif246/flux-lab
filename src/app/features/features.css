@@ -1,0 +1,147 @@
+.features-section {
+  width: 100%;
+  background: var(--bg);
+  padding-block: clamp(80px, 10vw, 140px);
+}
+
+.features-container {
+  width: min(90%, var(--container));
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto clamp(50px, 8vw, 80px);
+}
+
+.badge {
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--accent-gold);
+  background: rgba(197, 168, 128, 0.1);
+  padding: 6px 14px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.section-header h2 {
+  font-size: clamp(2.2rem, 5vw, 48px);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.section-header p {
+  font-size: clamp(15px, 2vw, 18px);
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.feature-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 24px;
+  padding: 40px 32px;
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--speed) var(--ease),
+              box-shadow var(--speed) var(--ease),
+              border-color var(--speed) var(--ease);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-gold) 100%);
+  opacity: 0;
+  transition: opacity var(--speed-fast) var(--ease);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-medium);
+  border-color: rgba(197, 168, 128, 0.25);
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+/* Icon Box */
+.icon-box {
+  width: 56px;
+  height: 56px;
+  background: #f4f4f6;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  transition: background-color var(--speed-fast) var(--ease),
+              color var(--speed-fast) var(--ease),
+              transform var(--speed) var(--ease);
+}
+
+.icon-box i {
+  font-size: 22px;
+  color: var(--text);
+  transition: transform var(--speed) var(--ease);
+}
+
+.feature-card:hover .icon-box {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.feature-card:hover .icon-box i {
+  color: #ffffff;
+  transform: scale(1.1) rotate(5deg);
+}
+
+.feature-card h3 {
+  font-size: clamp(18px, 2.5vw, 21px);
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.feature-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .feature-card {
+    padding: 32px 24px;
+  }
+}

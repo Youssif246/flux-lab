@@ -2,15 +2,15 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-hero',
+  selector: 'app-cta',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './hero.html',
-  styleUrl: './hero.css',
+  templateUrl: './cta.html',
+  styleUrl: './cta.css'
 })
-export class Hero {
-  scrollTo(sectionId: string) {
-    const element = document.getElementById(sectionId);
+export class Cta {
+  scrollToPackages() {
+    const element = document.getElementById('packages');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }

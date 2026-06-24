@@ -1,0 +1,19 @@
+<section class="features-section" id="features">
+  <div class="features-container">
+    <div class="section-header reveal">
+      <span class="badge">FEATURES</span>
+      <h2>Smart Networking, Redefined.</h2>
+      <p>FLUX packs next-generation technology into a beautiful, physical card.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card reveal" *ngFor="let item of featuresList; let i = index" [style.--delay.ms]="i * 100 + 50">
+        <div class="icon-box">
+          <i [class]="item.icon"></i>
+        </div>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

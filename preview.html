@@ -1,0 +1,1024 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>FLUX | Premium Smart NFC Business Cards</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Elevate your brand with FLUX. Premium contactless smart NFC business cards designed for modern professionals and teams. Share instantly with a single tap.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- Compiled Styles -->
+  <link rel="stylesheet" href="preview.css">
+</head>
+
+<body>
+
+  <!-- ==========================================
+       1) LOADER SCREEN
+       ========================================== -->
+  <div class="loader-wrapper" id="loader">
+    <div class="loader-content">
+      <!-- NFC Waves -->
+      <div class="nfc-pulse-container">
+        <div class="nfc-pulse pulse-1"></div>
+        <div class="nfc-pulse pulse-2"></div>
+        <div class="nfc-pulse pulse-3"></div>
+      </div>
+      <!-- 3D Card -->
+      <div class="card-perspective">
+        <div class="virtual-card">
+          <div class="card-front">
+            <div class="nfc-chip-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 3V21M12 3C8.5 3 6 5.5 6 9M12 3C15.5 3 18 5.5 18 9M12 21C8.5 21 6 18.5 6 15M12 21C15.5 21 18 18.5 18 15M6 9C6 11 7.5 12.5 9.5 12.5M18 9C18 11 16.5 12.5 14.5 12.5M6 15C6 13 7.5 11.5 9.5 11.5M18 15C18 13 16.5 11.5 14.5 11.5"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="card-logo">FLUX</div>
+            <div class="card-shine"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Loading Text -->
+      <div class="loader-text">
+        <span>L</span><span>O</span><span>A</span><span>D</span><span>I</span><span>N</span><span>G</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       2) PREMIUM GLASSMORPHIC NAVBAR
+       ========================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a onclick="scrollToSection('hero')" class="nav-logo">
+        <span>FLUX</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <div class="nav-links">
+        <a onclick="scrollToSection('features')" class="nav-link">Features</a>
+        <a onclick="scrollToSection('share')" class="nav-link">Share</a>
+        <a onclick="scrollToSection('packages')" class="nav-link">Packages</a>
+        <a onclick="scrollToSection('demo')" class="nav-link">Demo</a>
+        <a onclick="scrollToSection('reviews')" class="nav-link">Reviews</a>
+        <a onclick="scrollToSection('materials')" class="nav-link">Materials</a>
+      </div>
+
+      <!-- Desktop CTA -->
+      <div class="nav-cta">
+        <button onclick="scrollToSection('cta')" class="btn-navbar">Get Your Card</button>
+      </div>
+
+      <!-- Hamburger Menu Toggle -->
+      <button class="mobile-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+        <div class="hamburger">
+          <span class="bar line-top"></span>
+          <span class="bar line-mid"></span>
+          <span class="bar line-bot"></span>
+        </div>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-links">
+        <a onclick="scrollToSection('features')" class="mobile-link">Features</a>
+        <a onclick="scrollToSection('share')" class="mobile-link">Share</a>
+        <a onclick="scrollToSection('packages')" class="mobile-link">Packages</a>
+        <a onclick="scrollToSection('demo')" class="mobile-link">Demo</a>
+        <a onclick="scrollToSection('reviews')" class="mobile-link">Reviews</a>
+        <a onclick="scrollToSection('materials')" class="mobile-link">Materials</a>
+        <button onclick="scrollToSection('cta')" class="btn-mobile-cta">Get Your Card</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       3) HERO SECTION
+       ========================================== -->
+  <section class="hero-section reveal" id="hero">
+    <div class="glow-bubble glow-1"></div>
+    <div class="glow-bubble glow-2"></div>
+
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span class="badge-text">Next-Gen Contactless Networking</span>
+        </div>
+        <h1 class="hero-title">
+          One Card.<br />
+          Endless Possibilities.
+        </h1>
+        <p class="hero-subtitle">
+          A premium smart NFC business card that lets you share your entire professional profile, social accounts, and
+          booking links with a single tap.
+        </p>
+        <div class="hero-actions">
+          <button onclick="scrollToSection('packages')" class="btn-hero-primary">
+            <span>Get Your Card</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <button onclick="scrollToSection('demo')" class="btn-hero-secondary">
+            <span>See How It Works</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-mockup-wrapper">
+        <div class="hero-mockup-shadow"></div>
+        <img class="hero-mockup-img" src="public/hero-image-AiImageEnhancer-removebg-preview.png"
+          alt="FLUX Smart Card" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3.5) PREMIUM VIDEO SHOWCASE
+       ========================================== -->
+  <section class="video-showcase-section reveal" id="video-showcase">
+    <div class="video-showcase-container">
+      <div class="video-wrapper">
+        <video class="showcase-video" id="showcaseVideo" src="public/flux-video.mp4" autoplay loop muted playsinline
+          preload="auto">
+        </video>
+        <button class="sound-toggle-btn" id="soundToggleBtn" onclick="toggleVideoMute()" aria-label="Toggle mute">
+          <i class="fa-solid fa-volume-xmark" id="soundToggleIcon"></i>
+          <span id="soundToggleText">SOUND OFF</span>
+        </button>
+        <div class="video-overlay-gradient"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       4) FEATURES SECTION
+       ========================================== -->
+  <section class="features-section" id="features">
+    <div class="features-container">
+      <div class="section-header reveal">
+        <span class="badge">FEATURES</span>
+        <h2>Smart Networking, Redefined.</h2>
+        <p>FLUX packs next-generation technology into a beautiful, physical card.</p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card reveal" style="--delay: 50ms">
+          <div class="icon-box"><i class="fa-solid fa-globe"></i></div>
+          <h3>No App Required</h3>
+          <p>Interact instantly via web browser. No installation needed for recipients.</p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="feature-card reveal" style="--delay: 150ms">
+          <div class="icon-box"><i class="fa-solid fa-mobile-screen"></i></div>
+          <h3>iOS & Android Compatible</h3>
+          <p>Works seamlessly across all modern smart devices with a simple tap.</p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="feature-card reveal" style="--delay: 250ms">
+          <div class="icon-box"><i class="fa-solid fa-rotate"></i></div>
+          <h3>Update Anytime</h3>
+          <p>Edit your details dynamically in the cloud without reprinting physical cards.</p>
+        </div>
+        <!-- Feature 4 -->
+        <div class="feature-card reveal" style="--delay: 350ms">
+          <div class="icon-box"><i class="fa-solid fa-infinity"></i></div>
+          <h3>Unlimited Sharing</h3>
+          <p>Tap as many times as you like. There are no limits or caps on sharing.</p>
+        </div>
+        <!-- Feature 5 -->
+        <div class="feature-card reveal" style="--delay: 450ms">
+          <div class="icon-box"><i class="fa-solid fa-tag"></i></div>
+          <h3>One-Time Purchase</h3>
+          <p>Own your card forever. Zero subscription fees, zero recurring costs.</p>
+        </div>
+        <!-- Feature 6 -->
+        <div class="feature-card reveal" style="--delay: 550ms">
+          <div class="icon-box"><i class="fa-solid fa-leaf"></i></div>
+          <h3>Eco-Friendly</h3>
+          <p>Reduce paper waste. One smart card replaces thousands of paper cards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       5) SOCIAL SHARING SECTION
+       ========================================== -->
+  <section class="share-section" id="share">
+    <div class="share-container">
+      <div class="share-info reveal">
+        <span class="badge">EASY SHARING</span>
+        <h2>What Can<br />You Share?</h2>
+        <p>Tap your card to share anything instantly. From social profiles to complex business documents, FLUX has you
+          covered.</p>
+      </div>
+
+      <div class="share-grid">
+        <!-- WhatsApp -->
+        <div class="share-card reveal" style="--hover-color: #25D366; --delay: 0ms">
+          <div class="share-icon-wrapper"><i class="fa-brands fa-whatsapp"></i></div>
+          <span class="share-label">WhatsApp</span>
+        </div>
+        <!-- Phone -->
+        <div class="share-card reveal" style="--hover-color: #007AFF; --delay: 40ms">
+          <div class="share-icon-wrapper"><i class="fa-solid fa-phone"></i></div>
+          <span class="share-label">Phone</span>
+        </div>
+        <!-- Email -->
+        <div class="share-card reveal" style="--hover-color: #EA4335; --delay: 80ms">
+          <div class="share-icon-wrapper"><i class="fa-solid fa-envelope"></i></div>
+          <span class="share-label">Email</span>
+        </div>
+        <!-- Website -->
+        <div class="share-card reveal" style="--hover-color: #1B1B1F; --delay: 120ms">
+          <div class="share-icon-wrapper"><i class="fa-solid fa-desktop"></i></div>
+          <span class="share-label">Website</span>
+        </div>
+        <!-- Instagram -->
+        <div class="share-card reveal" style="--hover-color: #E1306C; --delay: 160ms">
+          <div class="share-icon-wrapper"><i class="fa-brands fa-instagram"></i></div>
+          <span class="share-label">Instagram</span>
+        </div>
+        <!-- LinkedIn -->
+        <div class="share-card reveal" style="--hover-color: #0077B5; --delay: 200ms">
+          <div class="share-icon-wrapper"><i class="fa-brands fa-linkedin-in"></i></div>
+          <span class="share-label">LinkedIn</span>
+        </div>
+        <!-- Portfolio -->
+        <div class="share-card reveal" style="--hover-color: #F4B400; --delay: 240ms">
+          <div class="share-icon-wrapper"><i class="fa-solid fa-folder-open"></i></div>
+          <span class="share-label">Portfolio</span>
+        </div>
+        <!-- Google Maps -->
+        <div class="share-card reveal" style="--hover-color: #4285F4; --delay: 280ms">
+          <div class="share-icon-wrapper"><i class="fa-solid fa-location-dot"></i></div>
+          <span class="share-label">Google Maps</span>
+        </div>
+        <!-- Booking -->
+        <div class="share-card reveal" style="--hover-color: #0F9D58; --delay: 320ms">
+          <div class="share-icon-wrapper"><i class="fa-solid fa-calendar-days"></i></div>
+          <span class="share-label">Bookings</span>
+        </div>
+        <!-- Brochures -->
+        <div class="share-card reveal" style="--hover-color: #FF5722; --delay: 360ms">
+          <div class="share-icon-wrapper"><i class="fa-solid fa-map"></i></div>
+          <span class="share-label">Brochures</span>
+        </div>
+        <!-- PDFs -->
+        <div class="share-card reveal" style="--hover-color: #F44336; --delay: 400ms">
+          <div class="share-icon-wrapper"><i class="fa-solid fa-file-pdf"></i></div>
+          <span class="share-label">PDFs</span>
+        </div>
+        <!-- Vcard -->
+        <div class="share-card reveal" style="--hover-color: #8E44AD; --delay: 440ms">
+          <div class="share-icon-wrapper"><i class="fa-solid fa-address-card"></i></div>
+          <span class="share-label">Contact Card</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       6) BUSINESS SOLUTIONS PACKAGES
+       ========================================== -->
+  <section class="packages-section" id="packages">
+    <div class="packages-container">
+      <div class="section-header reveal">
+        <span class="badge">TAILORED SOLUTIONS</span>
+        <h2>Solutions For Every Business</h2>
+        <p>Purpose-built NFC card packages designed to elevate your specific industry.</p>
+      </div>
+
+      <div class="packages-grid">
+        <!-- Restaurant Package -->
+        <div class="package-card reveal" style="--delay: 0ms">
+          <div class="card-glow"></div>
+          <span class="package-tag">Food & Beverage</span>
+          <h3>Restaurant Package</h3>
+          <p>Increase reviews, simplify ordering, and keep customers connected.</p>
+          <div class="image-wrapper">
+            <img src="public/images-4-removebg-preview.png" alt="Restaurant Package" class="package-img" />
+          </div>
+          <div class="package-actions">
+            <span class="actions-title">FEATURES INCLUDE:</span>
+            <div class="action-icons">
+              <div class="icon-item" title="Google Review"><i class="fa-brands fa-google"></i></div>
+              <div class="icon-item" title="Digital Menu"><i class="fa-solid fa-book-open"></i></div>
+              <div class="icon-item" title="Wi-Fi Connect"><i class="fa-solid fa-wifi"></i></div>
+              <div class="icon-item" title="Instagram"><i class="fa-brands fa-instagram"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Beauty Salon Package -->
+        <div class="package-card reveal" style="--delay: 100ms">
+          <div class="card-glow"></div>
+          <span class="package-tag">Beauty & Wellness</span>
+          <h3>Beauty Salon Package</h3>
+          <p>Generate more bookings and showcase your style and work portfolio.</p>
+          <div class="image-wrapper">
+            <img src="public/images-6-removebg-preview.png" alt="Beauty Salon Package" class="package-img" />
+          </div>
+          <div class="package-actions">
+            <span class="actions-title">FEATURES INCLUDE:</span>
+            <div class="action-icons">
+              <div class="icon-item" title="Easy Booking"><i class="fa-solid fa-calendar"></i></div>
+              <div class="icon-item" title="Social Profile"><i class="fa-brands fa-instagram"></i></div>
+              <div class="icon-item" title="Service List"><i class="fa-solid fa-list"></i></div>
+              <div class="icon-item" title="Google Review"><i class="fa-brands fa-google"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Clinic Package -->
+        <div class="package-card reveal" style="--delay: 200ms">
+          <div class="card-glow"></div>
+          <span class="package-tag">Healthcare</span>
+          <h3>Clinic Package</h3>
+          <p>Make appointment booking easier and improve patient trust.</p>
+          <div class="image-wrapper">
+            <img src="public/images-1-removebg-preview.png" alt="Clinic Package" class="package-img" />
+          </div>
+          <div class="package-actions">
+            <span class="actions-title">FEATURES INCLUDE:</span>
+            <div class="action-icons">
+              <div class="icon-item" title="Schedule Appointment"><i class="fa-solid fa-clock"></i></div>
+              <div class="icon-item" title="Quick Call"><i class="fa-solid fa-phone-volume"></i></div>
+              <div class="icon-item" title="Location"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="icon-item" title="Reviews"><i class="fa-brands fa-google"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Real Estate Package -->
+        <div class="package-card reveal" style="--delay: 300ms">
+          <div class="card-glow"></div>
+          <span class="package-tag">Real Estate & Agency</span>
+          <h3>Real Estate Package</h3>
+          <p>Showcase dynamic properties and capture client leads instantly.</p>
+          <div class="image-wrapper">
+            <img src="public/images-3-removebg-preview.png" alt="Real Estate Package" class="package-img" />
+          </div>
+          <div class="package-actions">
+            <span class="actions-title">FEATURES INCLUDE:</span>
+            <div class="action-icons">
+              <div class="icon-item" title="Listings"><i class="fa-solid fa-layer-group"></i></div>
+              <div class="icon-item" title="Direct Chat"><i class="fa-brands fa-whatsapp"></i></div>
+              <div class="icon-item" title="Office"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="icon-item" title="Reviews"><i class="fa-brands fa-google"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Retail Store Package -->
+        <div class="package-card reveal" style="--delay: 400ms">
+          <div class="card-glow"></div>
+          <span class="package-tag">Retail & Fashion</span>
+          <h3>Retail Store Package</h3>
+          <p>Drive physical store visits and promote your latest products.</p>
+          <div class="image-wrapper">
+            <img src="public/images-5-removebg-preview.png" alt="Retail Store Package" class="package-img" />
+          </div>
+          <div class="package-actions">
+            <span class="actions-title">FEATURES INCLUDE:</span>
+            <div class="action-icons">
+              <div class="icon-item" title="Offers"><i class="fa-solid fa-tag"></i></div>
+              <div class="icon-item" title="Online Store"><i class="fa-solid fa-bag-shopping"></i></div>
+              <div class="icon-item" title="Map Address"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="icon-item" title="Socials"><i class="fa-brands fa-instagram"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Corporate Package -->
+        <div class="package-card reveal" style="--delay: 500ms">
+          <div class="card-glow"></div>
+          <span class="package-tag">Enterprise & B2B</span>
+          <h3>Corporate Package</h3>
+          <p>Professional networking for modern enterprise teams.</p>
+          <div class="image-wrapper">
+            <img src="public/images-2-removebg-preview.png" alt="Corporate Package" class="package-img" />
+          </div>
+          <div class="package-actions">
+            <span class="actions-title">FEATURES INCLUDE:</span>
+            <div class="action-icons">
+              <div class="icon-item" title="VCard Details"><i class="fa-solid fa-user"></i></div>
+              <div class="icon-item" title="Company Info"><i class="fa-solid fa-building"></i></div>
+              <div class="icon-item" title="Digital Profile"><i class="fa-solid fa-id-card"></i></div>
+              <div class="icon-item" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       7) LIVE DEMO SECTION
+       ========================================== -->
+  <section class="video-section reveal" id="demo">
+    <div class="video-container">
+      <div class="section-header">
+        <span class="badge">LIVE DEMO</span>
+        <h2>Experience The Tap.</h2>
+        <p>Click the button below to see how seamlessly FLUX transfers information to any smartphone.</p>
+      </div>
+
+      <div class="demo-display">
+        <div class="stage">
+          <!-- Ripple Ring -->
+          <div class="nfc-ring" id="nfcRing"></div>
+
+          <!-- Simulated Phone -->
+          <div class="phone-container">
+            <div class="phone-body">
+              <div class="phone-speaker"></div>
+              <div class="phone-screen">
+                <!-- Waiting scan -->
+                <div class="screen-waiting" id="phoneWaiting">
+                  <div class="signal-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 18V20M17 18V20M7 18V20M12 4C7.58172 4 4 7.58172 4 12C4 13.9142 4.6738 15.671 5.79585 17.0423M19.7958 17.0423C20.3262 16.39 20.3262 15.61 19.7958 14.9577M19.7958 17.0423L17.5 14.7465M19.7958 17.0423C20.3262 17.6946 20.3262 18.4752 19.7958 19.1275M19.7958 17.0423C20.3262 17.6946 19.6738 18.4752 18.7958 18.4752M12 4C14.2091 4 16.2091 4.89543 17.6569 6.34315M12 4V6M12 8C10.8954 8 10 8.89543 10 10M12 8C13.1046 8 14 8.89543 14 10"
+                        stroke="currentColor" stroke-dasharray="2 2" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                  </div>
+                  <p class="waiting-title">Ready to Scan</p>
+                  <p class="waiting-subtitle">Hold a FLUX card near the top of the phone</p>
+                </div>
+
+                <!-- Profile loaded -->
+                <div class="screen-profile" id="phoneProfile">
+                  <div class="profile-header">
+                    <div class="profile-avatar">YS</div>
+                    <h4 class="profile-name">Youssif Salah</h4>
+                    <p class="profile-title">Founder & CEO, FLUX Lab</p>
+                  </div>
+                  <div class="profile-actions">
+                    <button class="profile-btn save-btn">
+                      <i class="fa-solid fa-user-plus"></i>
+                      <span>Save Contact</span>
+                    </button>
+                    <div class="profile-links-grid">
+                      <a class="profile-link-item link-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                      </a>
+                      <a class="profile-link-item link-linkedin">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                      </a>
+                      <a class="profile-link-item link-instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>Instagram</span>
+                      </a>
+                      <a class="profile-link-item link-web">
+                        <i class="fa-solid fa-globe"></i>
+                        <span>Website</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="profile-footer">
+                    <span>FLUX SMART PROFILE</span>
+                  </div>
+                </div>
+              </div>
+              <div class="phone-home-indicator"></div>
+            </div>
+          </div>
+
+          <!-- Card Simulator -->
+          <div class="card-simulator" id="cardSimulator">
+            <div class="sim-card-front">
+              <div class="sim-card-chip"></div>
+              <div class="sim-card-logo">FLUX</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="demo-controls">
+          <button onclick="runNfcSimulation()" class="btn-demo-trigger" id="nfcTriggerBtn">
+            <i class="fa-solid fa-fingerprint"></i>
+            <span>Simulate NFC Tap</span>
+          </button>
+          <button onclick="resetNfcSimulation()" class="btn-demo-reset" id="nfcResetBtn" style="display: none;">
+            <i class="fa-solid fa-rotate-left"></i>
+            <span>Reset Demo</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       8) GOOGLE REVIEWS SECTION
+       ========================================== -->
+  <section class="reviews-section" id="reviews">
+    <div class="reviews-container">
+      <div class="section-header reveal">
+        <span class="badge">GOOGLE REVIEWS</span>
+        <h2>Google Review Solutions.</h2>
+        <p>Help customers leave a 5-star review in seconds with a single contactless tap.</p>
+      </div>
+
+      <div class="reviews-hero-card reveal">
+        <div class="reviews-hero-content">
+          <span class="pill-badge">TAP TO REVIEW</span>
+          <h3>Help</h3>
+          <p class="hero-desc">
+            customers <br>
+            leave a review <br>
+            in seconds with <br>
+            a single tap.
+          </p>
+        </div>
+        <div class="reviews-hero-image-wrapper">
+          <img src="public/google-review-main.png" alt="FLUX Google Review Card" class="reviews-hero-img">
+        </div>
+      </div>
+
+      <div class="reviews-features-grid">
+        <!-- Star card -->
+        <div class="review-feature-card reveal" style="--delay: 0ms">
+          <div class="img-container">
+            <img src="public/stars.png" alt="Increase Reviews" class="feature-img">
+          </div>
+          <h3 class="feature-title">Increase Reviews</h3>
+          <p class="feature-desc">Make leaving reviews effortless</p>
+        </div>
+        <!-- Insights card -->
+        <div class="review-feature-card reveal" style="--delay: 150ms">
+          <div class="img-container">
+            <img src="public/insights.png" alt="Improve Visibility" class="feature-img">
+          </div>
+          <h3 class="feature-title">Improve Business Visibility</h3>
+          <p class="feature-desc">Rank higher and get discovered by more customers</p>
+        </div>
+        <!-- Trust card -->
+        <div class="review-feature-card reveal" style="--delay: 300ms">
+          <div class="img-container">
+            <img src="public/revies.png" alt="Build Customer Trust" class="feature-img">
+          </div>
+          <h3 class="feature-title">Build Customer Trust</h3>
+          <p class="feature-desc">Turn satisfied customers into social proof</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       9) COMPARISON & SAVE SECTION
+       ========================================== -->
+  <section class="comparison-section" id="comparison">
+    <div class="comparison-container">
+      <div class="section-header reveal">
+        <span class="badge">WHY FLUX?</span>
+        <h2>Why Businesses Choose FLUX</h2>
+        <p>Everything your business needs. Combined in one beautiful smart card.</p>
+      </div>
+
+      <div class="comparison-stage">
+        <!-- Traditional Card -->
+        <div class="compare-card reveal" style="--delay: 0ms">
+          <div class="card-img-holder">
+            <img src="public/old-way.png" alt="Traditional Business Card" class="compare-img">
+          </div>
+          <h3>Traditional Business Card</h3>
+          <ul class="points-list">
+            <li><i class="fa-solid fa-xmark"></i><span>Easy to lose or damage</span></li>
+            <li><i class="fa-solid fa-xmark"></i><span>Limited layout information</span></li>
+            <li><i class="fa-solid fa-xmark"></i><span>Requires constant reprinting</span></li>
+            <li><i class="fa-solid fa-xmark"></i><span>Costly recurring printing fees</span></li>
+            <li><i class="fa-solid fa-xmark"></i><span>Static, non-interactive paper</span></li>
+          </ul>
+        </div>
+
+        <!-- FLUX Card -->
+        <div class="compare-card flux-card-active reveal" style="--delay: 300ms">
+          <span class="compare-badge">RECOMMENDED</span>
+          <div class="card-img-holder">
+            <img src="public/new-way.png" alt="FLUX Smart Card" class="compare-img">
+          </div>
+          <h3>FLUX Smart Card</h3>
+          <ul class="points-list">
+            <li><i class="fa-solid fa-check"></i><span>Always available on your phone</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Unlimited links & documents</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Instant profile updates in real-time</span></li>
+            <li><i class="fa-solid fa-check"></i><span>One-time purchase, lifetime use</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Rich interactive customer experience</span></li>
+          </ul>
+        </div>
+
+        <!-- Divider Arrow -->
+        <div class="compare-divider reveal" style="--delay: 150ms">
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="save-section">
+    <div class="save-container">
+      <div class="save-text reveal">
+        <span class="save-badge">RETURN ON INVESTMENT</span>
+        <h2>Save Money.<br />Save Time.</h2>
+        <div class="save-pitch">
+          <p>Update your profile information instantly without ever printing, shipping, or ordering new paper business
+            cards again.</p>
+        </div>
+      </div>
+
+      <div class="benefits-grid">
+        <!-- Benefit 1 -->
+        <div class="benefit-item reveal" style="--delay: 0ms">
+          <div class="benefit-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <p class="benefit-title">Custom Branding</p>
+        </div>
+        <!-- Benefit 2 -->
+        <div class="benefit-item reveal" style="--delay: 100ms">
+          <div class="benefit-icon"><i class="fa-solid fa-qrcode"></i></div>
+          <p class="benefit-title">QR Integration</p>
+        </div>
+        <!-- Benefit 3 -->
+        <div class="benefit-item reveal" style="--delay: 200ms">
+          <div class="benefit-icon"><i class="fa-solid fa-chart-simple"></i></div>
+          <p class="benefit-title">Analytics Tracking</p>
+        </div>
+        <!-- Benefit 4 -->
+        <div class="benefit-item reveal" style="--delay: 300ms">
+          <div class="benefit-icon"><i class="fa-regular fa-paper-plane"></i></div>
+          <p class="benefit-title">Lead Generation</p>
+        </div>
+        <!-- Benefit 5 -->
+        <div class="benefit-item reveal" style="--delay: 400ms">
+          <div class="benefit-icon"><i class="fa-solid fa-cloud"></i></div>
+          <p class="benefit-title">Secure Cloud Profile</p>
+        </div>
+        <!-- Benefit 6 -->
+        <div class="benefit-item reveal" style="--delay: 500ms">
+          <div class="benefit-icon"><i class="fa-solid fa-globe"></i></div>
+          <p class="benefit-title">Multi-Language Support</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       10) MATERIALS SECTION
+       ========================================== -->
+  <section class="materials-section" id="materials">
+    <div class="materials-container">
+      <div class="section-header reveal">
+        <span class="badge">PHYSICAL CRAFTSMANSHIP</span>
+        <h2>Premium Materials</h2>
+        <p>Luxury textures and bespoke finishes designed to match any brand identity.</p>
+      </div>
+
+      <div class="materials-wrapper">
+        <div class="materials-grid">
+          <!-- Gold -->
+          <div class="material-card reveal" style="--delay: 0ms" onmousemove="handleCardTilt(event, this)"
+            onmouseleave="resetCardTilt(this)">
+            <div class="material-image-holder">
+              <img src="public/gold-removebg-preview.png" alt="Gold" class="material-img">
+              <div class="card-glass-shine"></div>
+            </div>
+            <p class="material-name">Gold</p>
+          </div>
+          <!-- Metal -->
+          <div class="material-card reveal" style="--delay: 80ms" onmousemove="handleCardTilt(event, this)"
+            onmouseleave="resetCardTilt(this)">
+            <div class="material-image-holder">
+              <img src="public/metal-Picsart-AiImageEnhancer.png" alt="Metal" class="material-img">
+              <div class="card-glass-shine"></div>
+            </div>
+            <p class="material-name">Metal</p>
+          </div>
+          <!-- Wood -->
+          <div class="material-card reveal" style="--delay: 160ms" onmousemove="handleCardTilt(event, this)"
+            onmouseleave="resetCardTilt(this)">
+            <div class="material-image-holder">
+              <img src="public/wood-Picsart-AiImageEnhancer-removebg-preview.png" alt="Wood" class="material-img">
+              <div class="card-glass-shine"></div>
+            </div>
+            <p class="material-name">Wood</p>
+          </div>
+          <!-- Plastic -->
+          <div class="material-card reveal" style="--delay: 240ms" onmousemove="handleCardTilt(event, this)"
+            onmouseleave="resetCardTilt(this)">
+            <div class="material-image-holder">
+              <img src="public/plastic-Picsart-AiImageEnhancer-removebg-preview.png" alt="Plastic" class="material-img">
+              <div class="card-glass-shine"></div>
+            </div>
+            <p class="material-name">Plastic</p>
+          </div>
+          <!-- Carbon -->
+          <div class="material-card reveal" style="--delay: 320ms" onmousemove="handleCardTilt(event, this)"
+            onmouseleave="resetCardTilt(this)">
+            <div class="material-image-holder">
+              <img src="public/carbon-fiber-Picsart-AiImageEnhancer__1_-removebg-preview.png" alt="Carbon Fiber"
+                class="material-img">
+              <div class="card-glass-shine"></div>
+            </div>
+            <p class="material-name">Carbon Fiber</p>
+          </div>
+          <!-- Matte Black -->
+          <div class="material-card reveal" style="--delay: 400ms" onmousemove="handleCardTilt(event, this)"
+            onmouseleave="resetCardTilt(this)">
+            <div class="material-image-holder">
+              <img src="public/Matte-black-premium-removebg-preview.png" alt="Matte Black Premium" class="material-img">
+              <div class="card-glass-shine"></div>
+            </div>
+            <p class="material-name">Matte Black Premium</p>
+          </div>
+        <!-- Transparent -->
+        <div class="material-card reveal" style="--delay: 480ms" onmousemove="handleCardTilt(event, this)"
+          onmouseleave="resetCardTilt(this)">
+          <div class="material-image-holder">
+            <img src="public/transpernt-Picsart-AiImageEnhancer-removebg-preview.png" alt="Transparent"
+              class="material-img">
+            <div class="card-glass-shine"></div>
+          </div>
+          <p class="material-name">Transparent</p>
+        </div>
+        <!-- Glossy -->
+        <div class="material-card reveal" style="--delay: 560ms" onmousemove="handleCardTilt(event, this)"
+          onmouseleave="resetCardTilt(this)">
+          <div class="material-image-holder">
+            <img src="public/glossy-finish-Picsart-AiImageEnhancer-removebg-preview.png" alt="Glossy Finish"
+              class="material-img">
+            <div class="card-glass-shine"></div>
+          </div>
+          <p class="material-name">Glossy Finish</p>
+        </div>
+        <!-- Custom Printed -->
+        <div class="material-card reveal" style="--delay: 640ms" onmousemove="handleCardTilt(event, this)"
+          onmouseleave="resetCardTilt(this)">
+          <div class="material-image-holder">
+            <img src="public/clostom-finish-Picsart-AiImageEnhancer-removebg-preview.png" alt="Custom printed card"
+              class="material-img">
+            <div class="card-glass-shine"></div>
+          </div>
+          <p class="material-name">Custom printed card</p>
+        </div>
+        <!-- Custom Finish -->
+        <div class="material-card reveal" style="--delay: 720ms" onmousemove="handleCardTilt(event, this)"
+          onmouseleave="resetCardTilt(this)">
+          <div class="material-image-holder">
+            <img src="public/custom-printed-card-Picsart-AiImageEnhancer.png" alt="Custom Finish" class="material-img">
+            <div class="card-glass-shine"></div>
+          </div>
+          <p class="material-name">Custom Finish</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       11) CTA SECTION
+       ========================================== -->
+  <section class="cta-section reveal" id="cta">
+    <div class="cta-box">
+      <div class="cta-glow"></div>
+      <div class="cta-content">
+        <span class="cta-badge">SMART NETWORKING</span>
+        <h2>Ready To Elevate <br />Your Brand?</h2>
+        <p>Transform every business interaction into an opportunity with FLUX.</p>
+        <button onclick="scrollToSection('packages')" class="btn-cta">
+          <span>Get Your FLUX Card</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+      <img src="public/fotter-image.png" alt="FLUX Cards Showcase" class="cta-image">
+    </div>
+  </section>
+
+  <!-- ==========================================
+       12) FOOTER SECTION
+       ========================================== -->
+  <footer class="footer reveal">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h2>FLUX</h2>
+          <p>Smart NFC Business Cards</p>
+        </div>
+        <div class="footer-info">
+          <div class="info-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@fluxlab.ae">info@fluxlab.ae</a>
+          </div>
+          <div class="info-item">
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:0544806804">054 480 6804</a>
+          </div>
+          <div class="info-item">
+            <i class="fa-brands fa-instagram"></i>
+            <a href="https://instagram.com/flux.lab.ae" target="_blank">&#64;flux.lab.ae</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="copyright">&copy; <span id="yearVal"></span> FLUX Lab. All rights reserved.</p>
+        <p class="designer">Crafted by <a href="https://wa.me/201006426860">Youssif Hossam.</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       JAVASCRIPT INTERACTIONS
+       ========================================== -->
+  <script>
+    // 1) Loader Fade-Out Action
+    window.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('yearVal').textContent = new Date().getFullYear();
+
+      setTimeout(() => {
+        const loader = document.getElementById('loader');
+        loader.classList.add('fade-out');
+        setTimeout(() => {
+          loader.style.display = 'none';
+        }, 500);
+      }, 2300);
+    });
+
+    // 2) Sticky Navbar Scroll Effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 30) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // 3) Mobile Menu Toggler
+    function toggleMobileMenu() {
+      const navbar = document.getElementById('navbar');
+      const menu = document.getElementById('mobileMenu');
+      navbar.classList.toggle('mobile-open');
+      menu.classList.toggle('open');
+    }
+
+    // 4) Smooth Scroll navigation
+    function scrollToSection(sectionId) {
+      // Close mobile drawer if open
+      const navbar = document.getElementById('navbar');
+      const menu = document.getElementById('mobileMenu');
+      navbar.classList.remove('mobile-open');
+      menu.classList.remove('open');
+
+      const targetElement = document.getElementById(sectionId);
+      if (targetElement) {
+        setTimeout(() => {
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+
+    // 5) Interactive NFC Tap Demonstration logic
+    function runNfcSimulation() {
+      const simulator = document.getElementById('cardSimulator');
+      const ring = document.getElementById('nfcRing');
+      const waitingScreen = document.getElementById('phoneWaiting');
+      const profileScreen = document.getElementById('phoneProfile');
+      const triggerBtn = document.getElementById('nfcTriggerBtn');
+      const resetBtn = document.getElementById('nfcResetBtn');
+
+      // Prevent double triggers
+      triggerBtn.disabled = true;
+
+      // Step A: Trigger physical card slide translation path
+      simulator.classList.add('tapping');
+
+      // Step B: Ring ripples activate at 0.6 seconds when card hover hits notch
+      setTimeout(() => {
+        ring.classList.add('active');
+      }, 200);
+
+      // Step C: Profile data loads on the phone screen at 1.1 seconds
+      setTimeout(() => {
+        waitingScreen.classList.add('hidden');
+        profileScreen.classList.add('visible');
+      }, 1100);
+
+      // Step D: Enable Reset and cleanup classes
+      setTimeout(() => {
+        simulator.classList.remove('tapping');
+        ring.classList.remove('active');
+        triggerBtn.disabled = false;
+        triggerBtn.style.display = 'none';
+        resetBtn.style.display = 'inline-flex';
+      }, 2500);
+    }
+
+    function resetNfcSimulation() {
+      const waitingScreen = document.getElementById('phoneWaiting');
+      const profileScreen = document.getElementById('phoneProfile');
+      const triggerBtn = document.getElementById('nfcTriggerBtn');
+      const resetBtn = document.getElementById('nfcResetBtn');
+
+      waitingScreen.classList.remove('hidden');
+      profileScreen.classList.remove('visible');
+      triggerBtn.style.display = 'inline-flex';
+      resetBtn.style.display = 'none';
+    }
+
+    // 6) Scroll Reveal (IntersectionObserver)
+    window.addEventListener('DOMContentLoaded', () => {
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, {
+        threshold: 0.05,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      reveals.forEach(el => observer.observe(el));
+    });
+
+    // 7) Video Mute/Unmute Toggler
+    function toggleVideoMute() {
+      const video = document.getElementById('showcaseVideo');
+      const icon = document.getElementById('soundToggleIcon');
+      const text = document.getElementById('soundToggleText');
+      if (!video) return;
+
+      video.muted = !video.muted;
+      if (video.muted) {
+        icon.className = 'fa-solid fa-volume-xmark';
+        text.textContent = 'SOUND OFF';
+      } else {
+        icon.className = 'fa-solid fa-volume-high';
+        text.textContent = 'SOUND ON';
+      }
+    }
+
+    // 8) Materials Card 3D Tilt Effect
+    function handleCardTilt(event, card) {
+      const img = card.querySelector('.material-img');
+      const shine = card.querySelector('.card-glass-shine');
+      if (!img) return;
+
+      const rect = card.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+
+      const xc = rect.width / 2;
+      const yc = rect.height / 2;
+
+      // Rotation angles (scale rotation based on cursor offset)
+      const rotateY = (x - xc) / 6;
+      const rotateX = (yc - y) / -6;
+
+      // Apply transforms synchronously for performance
+      img.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-12px) scale(1.06)`;
+      img.style.filter = `drop-shadow(${-rotateY * 0.8}px ${20 + rotateX * 0.8}px 24px rgba(0, 0, 0, 0.22))`;
+
+      if (shine) {
+        shine.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-12px) scale(1.06)`;
+        shine.style.opacity = '1';
+        const shinePercentX = (x / rect.width) * 100;
+        const shinePercentY = (y / rect.height) * 100;
+        shine.style.background = `radial-gradient(circle at ${shinePercentX}% ${shinePercentY}%, rgba(255, 255, 255, 0.18) 0%, transparent 60%)`;
+      }
+    }
+
+    function resetCardTilt(card) {
+      const img = card.querySelector('.material-img');
+      const shine = card.querySelector('.card-glass-shine');
+      if (!img) return;
+
+      // Reset transformations smoothly
+      img.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0) scale(1)';
+      img.style.filter = 'drop-shadow(0 10px 18px rgba(0, 0, 0, 0.15))';
+
+      if (shine) {
+        shine.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0) scale(1)';
+        shine.style.opacity = '0';
+      }
+    }
+  </script>
+</body>
+
+</html>
