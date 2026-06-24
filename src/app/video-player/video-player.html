@@ -1,0 +1,26 @@
+<section class="video-showcase-section reveal" id="video-showcase">
+  <div class="video-showcase-container">
+    <div class="video-wrapper">
+      <!-- Video Element -->
+      <video 
+        #videoRef
+        class="showcase-video" 
+        src="flux-video.mp4" 
+        autoplay 
+        loop 
+        muted 
+        playsinline
+        preload="auto">
+      </video>
+
+      <!-- Overlay Sound Toggle -->
+      <button class="sound-toggle-btn" (click)="toggleMute()" [aria-label]="isMuted ? 'Unmute video' : 'Mute video'">
+        <i class="fa-solid" [class.fa-volume-xmark]="isMuted" [class.fa-volume-high]="!isMuted"></i>
+        <span>{{ isMuted ? 'SOUND OFF' : 'SOUND ON' }}</span>
+      </button>
+
+      <!-- Gradient subtle overlay -->
+      <div class="video-overlay-gradient"></div>
+    </div>
+  </div>
+</section>

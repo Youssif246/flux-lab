@@ -1,0 +1,31 @@
+<section class="packages-section" id="packages">
+  <div class="packages-container">
+    <div class="section-header reveal">
+      <span class="badge">TAILORED SOLUTIONS</span>
+      <h2>Solutions For Every Business</h2>
+      <p>Purpose-built NFC card packages designed to elevate your specific industry.</p>
+    </div>
+
+    <div class="packages-grid">
+      <div class="package-card reveal" *ngFor="let item of packages; let i = index" [style.--delay.ms]="i * 100">
+        <div class="card-glow"></div>
+        <span class="package-tag">{{ item.tag }}</span>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+        
+        <div class="image-wrapper">
+          <img [src]="item.image" [alt]="item.title" class="package-img" />
+        </div>
+
+        <div class="package-actions">
+          <span class="actions-title">FEATURES INCLUDE:</span>
+          <div class="action-icons">
+            <div class="icon-item" *ngFor="let icon of item.icons" [title]="icon.label">
+              <i [class]="icon.name"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

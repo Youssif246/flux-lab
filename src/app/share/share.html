@@ -1,0 +1,23 @@
+<section class="share-section" id="share">
+  <div class="share-container">
+    <div class="share-info reveal">
+      <span class="badge">EASY SHARING</span>
+      <h2>
+        What Can <br/>
+        You Share?
+      </h2>
+      <p>
+        Tap your card to share anything instantly. From social profiles to complex business documents, FLUX has you covered.
+      </p>
+    </div>
+
+    <div class="share-grid">
+      <div class="share-card reveal" *ngFor="let item of shareItems; let i = index" [style.--hover-color]="item.color" [style.--delay.ms]="i * 40">
+        <div class="share-icon-wrapper">
+          <i [class]="item.icon"></i>
+        </div>
+        <span class="share-label">{{ item.label }}</span>
+      </div>
+    </div>
+  </div>
+</section>

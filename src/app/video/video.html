@@ -1,0 +1,96 @@
+<section class="video-section" id="demo">
+  <div class="video-container">
+    <div class="section-header">
+      <span class="badge">LIVE DEMO</span>
+      <h2>Experience The Tap.</h2>
+      <p>Click the button below to see how seamlessly FLUX transfers information to any smartphone.</p>
+    </div>
+
+    <div class="demo-display">
+      <div class="stage">
+        <!-- Golden NFC Pulse Ring -->
+        <div class="nfc-ring" [class.active]="isTapping"></div>
+
+        <!-- Phone Mockup Container -->
+        <div class="phone-container">
+          <div class="phone-body">
+            <div class="phone-speaker"></div>
+            <div class="phone-screen">
+              <!-- Default screen (waiting) -->
+              <div class="screen-waiting" [class.hidden]="isProfileLoaded">
+                <div class="signal-icon">
+                  <i class="fa-solid fa-nfc"></i>
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 18V20M17 18V20M7 18V20M12 4C7.58172 4 4 7.58172 4 12C4 13.9142 4.6738 15.671 5.79585 17.0423M19.7958 17.0423C20.3262 16.39 20.3262 15.61 19.7958 14.9577M19.7958 17.0423L17.5 14.7465M19.7958 17.0423C20.3262 17.6946 20.3262 18.4752 19.7958 19.1275M19.7958 17.0423C20.3262 17.6946 19.6738 18.4752 18.7958 18.4752M12 4C14.2091 4 16.2091 4.89543 17.6569 6.34315M12 4V6M12 8C10.8954 8 10 8.89543 10 10M12 8C13.1046 8 14 8.89543 14 10" stroke="currentColor" stroke-dasharray="2 2" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <p class="waiting-title">Ready to Scan</p>
+                <p class="waiting-subtitle">Hold a FLUX card near the top of the phone</p>
+              </div>
+
+              <!-- Loaded Profile Screen -->
+              <div class="screen-profile" [class.visible]="isProfileLoaded">
+                <div class="profile-header">
+                  <div class="profile-avatar">YS</div>
+                  <h4 class="profile-name">Youssif Salah</h4>
+                  <p class="profile-title">Founder & CEO, FLUX Lab</p>
+                </div>
+
+                <div class="profile-actions">
+                  <button class="profile-btn save-btn">
+                    <i class="fa-solid fa-user-plus"></i>
+                    <span>Save Contact</span>
+                  </button>
+
+                  <div class="profile-links-grid">
+                    <a class="profile-link-item link-whatsapp">
+                      <i class="fa-brands fa-whatsapp"></i>
+                      <span>WhatsApp</span>
+                    </a>
+                    <a class="profile-link-item link-linkedin">
+                      <i class="fa-brands fa-linkedin-in"></i>
+                      <span>LinkedIn</span>
+                    </a>
+                    <a class="profile-link-item link-instagram">
+                      <i class="fa-brands fa-instagram"></i>
+                      <span>Instagram</span>
+                    </a>
+                    <a class="profile-link-item link-web">
+                      <i class="fa-solid fa-globe"></i>
+                      <span>Website</span>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="profile-footer">
+                  <span>FLUX SMART PROFILE</span>
+                </div>
+              </div>
+            </div>
+            <div class="phone-home-indicator"></div>
+          </div>
+        </div>
+
+        <!-- Floating NFC Card -->
+        <div class="card-simulator" [class.tapping]="isTapping">
+          <div class="sim-card-front">
+            <div class="sim-card-chip"></div>
+            <div class="sim-card-logo">FLUX</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Toggler -->
+      <div class="demo-controls">
+        <button (click)="triggerTapSimulation()" class="btn-demo-trigger" [disabled]="isTapping">
+          <i class="fa-solid fa-fingerprint"></i>
+          <span>{{ isTapping ? 'Tapping Card...' : 'Simulate NFC Tap' }}</span>
+        </button>
+        <button (click)="resetSimulation()" class="btn-demo-reset" *ngIf="isProfileLoaded">
+          <i class="fa-solid fa-rotate-left"></i>
+          <span>Reset Demo</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

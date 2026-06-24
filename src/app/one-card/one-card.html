@@ -1,0 +1,59 @@
+<!-- Comparison Sub-section -->
+<section class="comparison-section" id="comparison">
+  <div class="comparison-container">
+    <div class="section-header">
+      <span class="badge">WHY FLUX?</span>
+      <h2>Why Businesses Choose FLUX</h2>
+      <p>Everything your business needs. Combined in one beautiful smart card.</p>
+    </div>
+
+    <div class="comparison-stage">
+      <div class="compare-card" *ngFor="let card of comparisonCards" [class.flux-card-active]="card.isFlux">
+        <!-- Badge for FLUX card -->
+        <span class="compare-badge" *ngIf="card.isFlux">RECOMMENDED</span>
+        
+        <div class="card-img-holder">
+          <img [src]="card.image" [alt]="card.title" class="compare-img">
+        </div>
+
+        <h3>{{ card.title }}</h3>
+
+        <ul class="points-list">
+          <li *ngFor="let point of card.points">
+            <i class="fa-solid" [class.fa-xmark]="!card.isFlux" [class.fa-check]="card.isFlux"></i>
+            <span>{{ point }}</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Arrow Divider (hidden on smaller screens) -->
+      <div class="compare-divider">
+        <i class="fa-solid fa-arrow-right-long"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Save Time & Money Sub-section -->
+<section class="save-section">
+  <div class="save-container">
+    <div class="save-text">
+      <span class="save-badge">RETURN ON INVESTMENT</span>
+      <h2>Save Money.<br/>Save Time.</h2>
+      
+      <div class="save-pitch">
+        <p>Update your profile information instantly without ever printing, shipping, or ordering new paper business cards again.</p>
+      </div>
+    </div>
+
+    <!-- Benefits Grid -->
+    <div class="benefits-grid">
+      <div class="benefit-item" *ngFor="let item of benefits">
+        <div class="benefit-icon">
+          <i [class]="item.icon"></i>
+        </div>
+        <p class="benefit-title">{{ item.title }}</p>
+      </div>
+    </div>
+  </div>
+</section>

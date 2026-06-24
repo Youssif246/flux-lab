@@ -1,0 +1,36 @@
+<div class="loader-wrapper" *ngIf="isVisible" [class.fade-out]="isFadingOut">
+  <div class="loader-content">
+    <!-- NFC Signal Wave Ripples -->
+    <div class="nfc-pulse-container">
+      <div class="nfc-pulse pulse-1"></div>
+      <div class="nfc-pulse pulse-2"></div>
+      <div class="nfc-pulse pulse-3"></div>
+    </div>
+
+    <!-- 3D Card Animation -->
+    <div class="card-perspective">
+      <div class="virtual-card">
+        <div class="card-front">
+          <div class="nfc-chip-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 3V21M12 3C8.5 3 6 5.5 6 9M12 3C15.5 3 18 5.5 18 9M12 21C8.5 21 6 18.5 6 15M12 21C15.5 21 18 18.5 18 15M6 9C6 11 7.5 12.5 9.5 12.5M18 9C18 11 16.5 12.5 14.5 12.5M6 15C6 13 7.5 11.5 9.5 11.5M18 15C18 13 16.5 11.5 14.5 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="card-logo">FLUX</div>
+          <div class="card-shine"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Glowing Loading Text -->
+    <div class="loader-text">
+      <span>L</span>
+      <span>O</span>
+      <span>A</span>
+      <span>D</span>
+      <span>I</span>
+      <span>N</span>
+      <span>G</span>
+    </div>
+  </div>
+</div>
