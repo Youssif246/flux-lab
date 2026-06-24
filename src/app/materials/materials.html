@@ -1,0 +1,47 @@
+<section class="materials-section">
+  <h2>Materials</h2>
+  <p class="subtitle">Premium Materials For Every Brand.</p>
+
+  <div class="materials-box">
+    <div class="materials-grid">
+      <div class="material-card" *ngFor="let material of materials">
+        <img [src]="material.image" [alt]="material.name">
+        <p>{{ material.name }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cta-section">
+  <div class="cta-box">
+    <div class="cta-glow"></div>
+
+    <div class="cta-content">
+      <span>SMART NETWORKING</span>
+
+      <h2>
+        Ready To Elevate <br>
+        Your Brand?
+      </h2>
+
+      <p>
+        Transform every interaction into opportunity with FLUX.
+      </p>
+
+      <button>Get Your FLUX Card</button>
+    </div>
+
+    <img src="fotter-image.png" class="cta-image">
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-top">
+    <h2>FLUX</h2>
+    <p>Smart NFC Business Cards</p>
+  </div>
+
+  <div class="footer-bottom">
+    <div>info@fluxlab.ae</div>
+    <div>054 480 6804</div>
+    <div>@flux.lab.ae</div>
+  </div>
+</footer>

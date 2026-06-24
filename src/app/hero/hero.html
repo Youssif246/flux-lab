@@ -1,0 +1,127 @@
+
+
+  <div class="page">
+    <div class="container">
+
+      <!-- HERO SECTION -->
+      <section class="hero-section">
+        <div class="hero">
+          <img src="flux-Picsart-AiImageEnhancer-removebg-preview.png" alt="FLUX" />
+          <h2>One Card. Endless Possibilities.</h2>
+          <h3>
+            Smart NFC Business Card that allows you to share your
+            entire professional profile with a single tap.
+          </h3>
+        </div>
+
+        <img class="hero-image" src="hero-image-AiImageEnhancer-removebg-preview.png" alt="" />
+
+        <div class="boxes">
+          <div class="box">
+            <i class="fa-solid fa-globe"></i>
+            <p>No App Required</p>
+          </div>
+          <div class="box">
+            <i class="fa-solid fa-mobile-screen"></i>
+            <p>Works on iPhone &amp; Android</p>
+          </div>
+          <div class="box">
+            <i class="fa-solid fa-rotate"></i>
+            <p>Update Information Anytime</p>
+          </div>
+          <div class="box">
+            <i class="fa-solid fa-infinity"></i>
+            <p>Unlimited Sharing</p>
+          </div>
+          <div class="box">
+            <i class="fa-solid fa-tag"></i>
+            <p>One-Time Purchase</p>
+          </div>
+          <div class="box">
+            <i class="fa-solid fa-leaf"></i>
+            <p>Eco-Friendly</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SHARE SECTION -->
+      <section class="share-section">
+        <h4>
+          <span>What</span>
+          <span>Can You</span>
+          <span>Share ?</span>
+        </h4>
+
+        <div class="icons-wrapper">
+          <div class="icon">
+            <i class="fa-brands fa-whatsapp"></i>
+            <p>WhatsApp</p>
+          </div>
+          <div class="icon">
+            <i class="fa-solid fa-phone"></i>
+            <p>Phone</p>
+          </div>
+          <div class="icon">
+            <i class="fa-solid fa-envelope"></i>
+            <p>Email</p>
+          </div>
+          <div class="icon">
+            <i class="fa-solid fa-desktop"></i>
+            <p>Website</p>
+          </div>
+          <div class="icon">
+            <i class="fa-brands fa-instagram"></i>
+            <p>Instagram</p>
+          </div>
+          <div class="icon">
+            <i class="fa-brands fa-linkedin-in"></i>
+            <p>LinkedIn</p>
+          </div>
+          <div class="icon">
+            <i class="fa-solid fa-folder-open"></i>
+            <p>Portfolio</p>
+          </div>
+          <div class="icon">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Google Maps</p>
+          </div>
+          <div class="icon">
+            <i class="fa-solid fa-calendar-days"></i>
+            <p>Booking Links</p>
+          </div>
+          <div class="icon">
+            <i class="fa-solid fa-map"></i>
+            <p>Brochures &amp; Documents</p>
+          </div>
+          <div class="icon">
+            <i class="fa-solid fa-file-pdf"></i>
+            <p>PDF Documents</p>
+          </div>
+          <div class="icon">
+            <i class="fa-solid fa-address-card"></i>
+            <p>Digital Contact Card</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARDS SECTION -->
+      <section class="cards-section">
+        <h2>Solutions For Every Business</h2>
+        <p>Purpose-built NFC card packages designed for every industry.</p>
+
+        <div class="cards">
+          <div class="card" *ngFor="let card of cards">
+            <p>{{ card.title }}</p>
+            <p>{{ card.description }}</p>
+
+            <img [src]="card.image" [alt]="card.title" />
+
+            <div class="card-icons">
+              <i *ngFor="let icon of card.icons" [class]="icon"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>

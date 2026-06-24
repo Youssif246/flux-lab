@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  width: 100%;
+}
+
+body {
+  background: #f5f5f5;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+}
+
+/* =======================
+   Google Review Section
+======================= */
+.reviews-section {
+  max-width: 1440px;
+  margin: auto;
+  padding: 80px 40px;
+}
+
+.reviews-section h2 {
+  text-align: center;
+  font-size: 74px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  letter-spacing: -2px;
+}
+
+.hero-card {
+  width: 100%;
+  min-height: 520px;
+  border: 1px solid #d8d8d8;
+  border-radius: 34px;
+  background: #fafafa;
+  padding: 50px 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.hero-content {
+  width: 38%;
+}
+
+.hero-content h3 {
+  font-size: 120px;
+  font-weight: 400;
+  line-height: 0.9;
+  margin-bottom: 18px;
+}
+
+.hero-content p {
+  font-size: 58px;
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.hero-image {
+  width: 55%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 650px;
+  object-fit: contain;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 42px;
+}
+
+.feature {
+  text-align: center;
+}
+
+.feature img {
+  width: 100%;
+  border-radius: 18px;
+}
+
+.feature .title {
+  margin-top: 16px;
+  font-size: 31px;
+  font-weight: 700;
+}
+
+.feature .desc {
+  margin-top: 8px;
+  color: #555;
+  font-size: 18px;
+}
+
+/* =======================
+   Flux Section
+======================= */
+.flux-section {
+  margin-top: 70px;
+}
+
+.flux-header {
+  width: 100%;
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.flux-header p:first-child {
+  font-size: 72px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.flux-header p:nth-child(2) {
+  font-size: 38px;
+  margin-bottom: 30px;
+}
+
+.flux-header p:last-child {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: #3d3d3d;
+  font-size: 18px;
+}
+
+.comparison {
+  max-width: 1440px;
+  margin: auto;
+  padding: 90px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  position: relative;
+}
+
+.card {
+  width: 460px;
+  min-height: 620px;
+  border: 1px solid #d7d7d7;
+  border-radius: 34px;
+  background: #fafafa;
+  padding: 45px;
+}
+
+.card img {
+  width: 100%;
+  max-width: 230px;
+  display: block;
+  margin: 0 auto 30px;
+}
+
+.card h3 {
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+.card ul {
+  padding-left: 28px;
+}
+
+.card li {
+  font-size: 28px;
+  line-height: 1.7;
+}
+
+/* السهم اللي في النص */
+.comparison::after {
+  content: "➜";
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  color: #d0d0d0;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .hero-card,
+  .comparison {
+    flex-direction: column;
+  }
+
+  .comparison::after {
+    display: none;
+  }
+
+  .hero-content,
+  .hero-image,
+  .card {
+    width: 100%;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+.save-section {
+  width: 100%;
+  background: #000;
+  color: white;
+  padding: 90px 120px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+
+.text {
+  flex: 1;
+}
+
+.text h2 {
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.ps {
+  margin-top: 60px;
+}
+
+.ps p {
+  font-size: 34px;
+  line-height: 1.25;
+}
+
+/* Grid */
+.benefits-grid {
+  flex: 1.2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.benefit {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-right: 1px solid rgba(255,255,255,0.35);
+  border-bottom: 1px solid rgba(255,255,255,0.35);
+  padding: 20px;
+}
+
+.benefit:nth-child(3),
+.benefit:nth-child(6) {
+  border-right: none;
+}
+
+.benefit:nth-child(n+4) {
+  border-bottom: none;
+}
+
+.benefit i {
+  font-size: 52px;
+  margin-bottom: 18px;
+}
+
+.benefit p {
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.25;
+  max-width: 180px;
+}
