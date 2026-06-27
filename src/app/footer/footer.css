@@ -79,10 +79,38 @@
   gap: 20px;
   flex-wrap: wrap;
 }
-
 .designer {
-  font-style: italic;
   font-size: 12px;
+  color: rgba(255, 255, 255, 0.46);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.designer a {
+  color: rgba(255, 255, 255, 0.64);
+  text-decoration: none;
+  font-weight: 400;
+  position: relative;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.designer a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 1.5px;
+  background: rgba(255,255,255,0.45);
+  transition: width 0.25s ease;
+}
+
+.designer a:hover {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.designer a:hover::after {
+  width: 100%;
 }
 
 /* Responsiveness */

@@ -1,13 +1,13 @@
 .video-showcase-section {
   width: 100%;
   background: var(--bg);
-  padding-block: 20px clamp(40px, 6vw, 80px);
+  padding-block: 16px clamp(30px, 5vw, 60px);
   display: flex;
   justify-content: center;
 }
 
 .video-showcase-container {
-  width: min(90%, var(--container));
+  width: min(96%, var(--container));
   display: flex;
   justify-content: center;
 }
@@ -15,12 +15,14 @@
 .video-wrapper {
   position: relative;
   width: 100%;
-  max-width: 1000px;
+  max-width: 680px;
+  height: min(85vh, 92vw);
+  max-height: 85vh;
   border-radius: 28px;
   overflow: hidden;
   box-shadow: var(--shadow-medium);
   background: #000000;
-  aspect-ratio: 16 / 9; /* Prevent layout shifts */
+  aspect-ratio: 9 / 19.5; /* Prevent layout shifts */
   transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
 }
 
@@ -84,7 +86,9 @@
 @media (max-width: 640px) {
   .video-wrapper {
     border-radius: 20px;
+    aspect-ratio: 9 / 16; /* Prevent layout shifts */
   }
+  
   .sound-toggle-btn {
     bottom: 16px;
     right: 16px;

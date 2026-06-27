@@ -9,10 +9,4 @@ import { CommonModule } from '@angular/common';
   styleUrl: './hero.css',
 })
 export class Hero {
-  scrollTo(sectionId: string) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  }
 }

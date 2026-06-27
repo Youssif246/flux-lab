@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './video-player.html',
   styleUrl: './video-player.css'
 })
-export class VideoPlayer {
+export class VideoPlayer implements AfterViewInit {
   isMuted = true;
 
   @ViewChild('videoRef') videoRef!: ElementRef<HTMLVideoElement>;
@@ -18,6 +18,23 @@ export class VideoPlayer {
       const video = this.videoRef.nativeElement;
       video.muted = !video.muted;
       this.isMuted = video.muted;
+    }
+  }
+
+  ngAfterViewInit() {
+    // Ensure the video starts playing on load (some browsers require a play() call even when muted)
+    const video = this.videoRef?.nativeElement;
+    if (video) {
+      video.loop = true;
+      // Attempt to play; ignore promise rejection (browsers may block autoplay under certain policies)
+      const playPromise = video.play();
+      if (playPromise && typeof playPromise.then === 'function') {
+        playPromise.catch(() => {
+          // Autoplay blocked; keep muted so user can unmute manually
+          video.muted = true;
+          this.isMuted = true;
+        });
+      }
     }
   }
 }

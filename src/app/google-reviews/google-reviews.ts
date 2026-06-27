@@ -11,17 +11,17 @@ import { CommonModule } from '@angular/common';
 export class GoogleReviews {
   fetures = [
     {
-      image: 'stars.png',
+      image: 'stars.webp',
       title: 'Increase Reviews',
       description: 'Make leaving reviews effortless'
     },
     {
-      image: 'insights.png',
+      image: 'map.webp',
       title: 'Improve Business Visibility',
       description: 'Rank higher and get discovered by more customers'
     },
     {
-      image: 'revies.png',
+      image: 'reviews.webp',
       title: 'Build Customer Trust',
       description: 'Turn satisfied customers into social proof'
     }

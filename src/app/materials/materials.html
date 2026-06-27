@@ -8,9 +8,9 @@
 
     <div class="materials-wrapper">
       <div class="materials-grid">
-        <div class="material-card reveal" *ngFor="let item of materials; let i = index" [style.--delay.ms]="i * 80" #cardElement (mousemove)="onMouseMove($event, cardElement)" (mouseleave)="onMouseLeave(cardElement)">
+        <div class="material-card reveal" *ngFor="let item of materials; let i = index" [style.--delay.ms]="i * 80" #cardElement>
           <div class="material-image-holder">
-            <img [src]="item.image" [alt]="item.name" class="material-img">
+            <img loading="lazy" [src]="item.image" [alt]="item.name" class="material-img">
             <!-- Gold/glass reflection swipe overlay -->
             <div class="card-glass-shine"></div>
           </div>

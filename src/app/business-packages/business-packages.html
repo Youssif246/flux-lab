@@ -14,7 +14,7 @@
         <p>{{ item.description }}</p>
         
         <div class="image-wrapper">
-          <img [src]="item.image" [alt]="item.title" class="package-img" />
+          <img loading="lazy" [src]="item.image" [alt]="item.title" class="package-img" />
         </div>
 
         <div class="package-actions">

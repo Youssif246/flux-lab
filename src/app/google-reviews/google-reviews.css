@@ -154,12 +154,9 @@
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 450px) {
   .reviews-features-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .reviews-hero-card {
-    padding: 30px 20px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
   }
 }

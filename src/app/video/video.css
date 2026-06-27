@@ -46,10 +46,11 @@
   opacity: 0;
   pointer-events: none;
   z-index: 10;
+  will-change: opacity, transform;
 }
 
 .nfc-ring.active {
-  animation: nfcRingRipple 1.4s ease-out;
+  animation: nfcRingRipple 1.4s ease-out forwards;
   animation-delay: 0.6s;
 }
 
@@ -283,6 +284,8 @@
   z-index: 15;
   transition: transform 0.4s ease;
   transform: rotate(-12deg);
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .sim-card-front {
@@ -318,6 +321,7 @@
 /* Slide Card to Notch Animation when tapping */
 .card-simulator.tapping {
   animation: cardTapPath 2.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  animation-fill-mode: forwards;
 }
 
 /* Controls */
@@ -338,6 +342,8 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  animation: waitingPulse 2.2s ease-in-out infinite;
+  will-change: transform, opacity;
 }
 
 .btn-demo-trigger:hover:not(:disabled) {
@@ -349,6 +355,7 @@
 .btn-demo-trigger:disabled {
   opacity: 0.7;
   cursor: not-allowed;
+  animation: none;
 }
 
 .btn-demo-reset {

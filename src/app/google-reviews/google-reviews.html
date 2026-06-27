@@ -20,7 +20,7 @@
       </div>
 
       <div class="reviews-hero-image-wrapper">
-        <img src="google-review-main.png" alt="FLUX Google Review Card" class="reviews-hero-img">
+        <img loading="lazy" src="google-review-main.png" alt="FLUX Google Review Card" class="reviews-hero-img">
       </div>
     </div>
 
@@ -28,7 +28,7 @@
     <div class="reviews-features-grid">
       <div class="review-feature-card" *ngFor="let item of fetures">
         <div class="img-container">
-          <img [src]="item.image" [alt]="item.title" class="feature-img">
+          <img loading="lazy" [src]="item.image" [alt]="item.title" class="feature-img">
         </div>
         <h3 class="feature-title">{{ item.title }}</h3>
         <p class="feature-desc">{{ item.description }}</p>

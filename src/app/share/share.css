@@ -107,7 +107,7 @@
 /* Responsive Grid layouts */
 @media (max-width: 1024px) {
   .share-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -127,7 +127,7 @@
 
 @media (max-width: 580px) {
   .share-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 12px;
   }
   .share-card {
@@ -147,6 +147,6 @@
 
 @media (max-width: 400px) {
   .share-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }

@@ -1,23 +1,27 @@
-<nav class="navbar" [class.scrolled]="isScrolled" [class.mobile-open]="isMobileMenuOpen">
+<nav class="navbar" [class.mobile-open]="isMobileMenuOpen">
   <div class="nav-container">
     <!-- Logo -->
-    <a (click)="scrollToSection('hero')" class="nav-logo">
+    <a class="nav-logo">
       <span>FLUX</span>
     </a>
 
     <!-- Desktop Navigation Links -->
     <div class="nav-links">
-      <a (click)="scrollToSection('features')" class="nav-link">Features</a>
-      <a (click)="scrollToSection('share')" class="nav-link">Share</a>
-      <a (click)="scrollToSection('packages')" class="nav-link">Packages</a>
-      <a (click)="scrollToSection('demo')" class="nav-link">Demo</a>
-      <a (click)="scrollToSection('reviews')" class="nav-link">Reviews</a>
-      <a (click)="scrollToSection('materials')" class="nav-link">Materials</a>
+      <a href="#features" class="nav-link">Features</a>
+      <a href="#share" class="nav-link">Share</a>
+      <a href="#demo" class="nav-link">Demo</a>
+      <a href="#packages" class="nav-link">Packages</a>
+      <a href="#reviews" class="nav-link">Reviews</a>
+      <a href="#materials" class="nav-link">Materials</a>
     </div>
 
     <!-- Desktop CTA Action -->
     <div class="nav-cta">
-      <button (click)="scrollToSection('cta')" class="btn-navbar">Get Your Card</button>
+      <a class="btn-navbar"
+      href="https://wa.me/971506565807?text=Hi%2C%20I%E2%80%99m%20interested%20in%20FLUX%20NFC%20Smart%20Cards%20for%20my%20business.%20I%E2%80%99d%20like%20to%20know%20more%20about%20the%20available%20options%20and%20pricing.%0A%0A%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D9%86%D8%A7%20%D9%85%D9%87%D8%AA%D9%85%20%D8%A8%D8%A8%D8%B7%D8%A7%D9%82%D8%A7%D8%AA%20FLUX%20%D8%A7%D9%84%D8%B0%D9%83%D9%8A%D8%A9%20%D9%84%D8%B4%D8%B1%D9%83%D8%AA%D9%8A%2F%D8%B9%D9%85%D9%84%D9%8A%D8%8C%20%D9%88%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D9%85%D8%B9%D8%B1%D9%81%D8%A9%20%D8%A7%D9%84%D8%AE%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D8%AA%D8%A7%D8%AD%D8%A9%20%D9%88%D8%A7%D9%84%D8%A3%D8%B3%D8%B9%D8%A7%D8%B1."
+      target="_blank"
+      rel="noopener noreferrer">
+      Get Your Card</a>
     </div>
 
     <!-- Mobile Hamburger Toggle -->
@@ -32,14 +36,20 @@
 
   <!-- Mobile Dropdown Menu -->
   <div class="mobile-menu" [class.open]="isMobileMenuOpen">
-    <div class="mobile-links">
-      <a (click)="scrollToSection('features')" class="mobile-link">Features</a>
-      <a (click)="scrollToSection('share')" class="mobile-link">Share</a>
-      <a (click)="scrollToSection('packages')" class="mobile-link">Packages</a>
-      <a (click)="scrollToSection('demo')" class="mobile-link">Demo</a>
-      <a (click)="scrollToSection('reviews')" class="mobile-link">Reviews</a>
-      <a (click)="scrollToSection('materials')" class="mobile-link">Materials</a>
-      <button (click)="scrollToSection('cta')" class="btn-mobile-cta">Get Your Card</button>
-    </div>
+  <div class="mobile-links">
+    <a href="#features" (click)="toggleMobileMenu()" class="mobile-link">Features</a>
+    <a href="#share" (click)="toggleMobileMenu()" class="mobile-link">Share</a>
+    <a href="#demo" (click)="toggleMobileMenu()" class="mobile-link">Demo</a>
+    <a href="#packages" (click)="toggleMobileMenu()" class="mobile-link">Packages</a>
+    <a href="#reviews" (click)="toggleMobileMenu()" class="mobile-link">Reviews</a>
+    <a href="#materials" (click)="toggleMobileMenu()" class="mobile-link">Materials</a>
+    <a       
+    href="https://wa.me/971506565807?text=Hi%2C%20I%E2%80%99m%20interested%20in%20FLUX%20NFC%20Smart%20Cards%20for%20my%20business.%20I%E2%80%99d%20like%20to%20know%20more%20about%20the%20available%20options%20and%20pricing.%0A%0A%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D9%86%D8%A7%20%D9%85%D9%87%D8%AA%D9%85%20%D8%A8%D8%A8%D8%B7%D8%A7%D9%82%D8%A7%D8%AA%20FLUX%20%D8%A7%D9%84%D8%B0%D9%83%D9%8A%D8%A9%20%D9%84%D8%B4%D8%B1%D9%83%D8%AA%D9%8A%2F%D8%B9%D9%85%D9%84%D9%8A%D8%8C%20%D9%88%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D9%85%D8%B9%D8%B1%D9%81%D8%A9%20%D8%A7%D9%84%D8%AE%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D8%AA%D8%A7%D8%AD%D8%A9%20%D9%88%D8%A7%D9%84%D8%A3%D8%B3%D8%B9%D8%A7%D8%B1."
+    target="_blank"
+    rel="noopener noreferrer" 
+    (click)="toggleMobileMenu()" class="btn-mobile-cta">
+      Get Your Card
+    </a>
+  </div>
   </div>
 </nav>
